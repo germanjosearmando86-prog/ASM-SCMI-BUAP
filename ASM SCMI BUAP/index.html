@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM - SCMI BUAP</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+
+<header>
+    <div class="container">
+        <p class="nombre-asociacion">
+            Asociación Estudiantil de Infectología<br>
+            <span>ASM - SCMI BUAP</span>
+        </p>
+
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+<a href="conocenos.html">Conócenos</a>
+<a href="podcast.html">Podcast</a>
+<a href="revista.html">Revista</a>
+<a href="actividades.html">Actividades</a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+    <section class="hero" style="--imagen-fondo: url('media/portadaasm.jpg');">
+        <p>Comprender la infección para transformar la salud</p>
+        <h1>¡Somos ASM!</h1>
+        <!-- <a class="boton" href="conocenos.html#coordinacion-academica">
+            Conoce a las coordinaciones
+        </a> -->
+    </section>
+
+    <section class="seccion-texto">
+        <div class="container">
+            <h2>¿Qué es la ASM - SCMI?</h2>
+            <p>
+                Somos una asociación estudiantil comprometida con la investigación
+                y actualización constante sobre los temas de infectología médica
+                y microbiología aplicada a las ciencias de la salud.
+            </p>
+        </div>
+    </section>
+
+    <section id="cartasinicio">
+        <div class="container">
+            <div class="cuadrosinicio">
+                <h3>CONÓCENOS</h3>
+                <p>Quiénes somos, equipo, misión y visión.</p>
+                <a class="boton" href="conocenos.html">Ver más</a>
+            </div>
+
+            <div class="cuadrosinicio">
+                <h3>COORDINACIONES</h3>
+                <p>Conoce las cuatro áreas que integran la asociación.</p>
+                <a class="boton" href="coordinaciones.html">Ver áreas</a>
+            </div>
+
+            <div class="cuadrosinicio">
+                <h3>ACTIVIDADES</h3>
+                <p>Eventos, convocatorias y novedades.</p>
+                <a class="boton" href="actividades.html">Ver actividades</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-texto seccion-gris">
+        <div class="container">
+            <h2>Nuestra comunidad</h2>
+
+            <div class="carrusel">
+                <div class="diapositiva activa">
+                    <img src="media/tren1.jpg" alt="Comunidad ASM">
+                </div>
+
+                <div class="diapositiva">
+                    <img src="media/tren2.jpg" alt="Actividad de la asociación">
+                </div>
+
+                <div class="diapositiva">
+                    <img src="media/tren3.jpg" alt="Integrantes ASM">
+                </div>
+
+                <button class="anterior" type="button">&#10094;</button>
+                <button class="siguiente" type="button">&#10095;</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="redes-sociales">
+    <h2>Síguenos en nuestras redes</h2>
+
+    <div class="botones-redes">
+        <a
+            class="boton"
+            href="https://www.instagram.com/asm_scmi.buap?igsh=M2UzZmc2c3JlYmVq"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Instagram
+        </a>
+
+        <a
+            class="boton"
+            href="https://www.facebook.com/share/1EsV5mFBMw/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Facebook
+        </a>
+
+        <a
+            class="boton"
+            href="https://www.tiktok.com/@asm_buap?_r=1&amp;_t=ZS-98YzMbP35PR"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            TikTok
+        </a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; ASM - SCMI BUAP 2026</p>
+    </div>
+</footer>
+
+
+<script>
+document.querySelectorAll(".carrusel").forEach(function(carrusel){
+    const diapositivas = carrusel.querySelectorAll(".diapositiva");
+    const anterior = carrusel.querySelector(".anterior");
+    const siguiente = carrusel.querySelector(".siguiente");
+    let posicionActual = 0;
+
+    function mostrarDiapositiva(posicion){
+        diapositivas.forEach(function(diapositiva){
+            diapositiva.classList.remove("activa");
+        });
+
+        diapositivas[posicion].classList.add("activa");
+    }
+
+    function pasarSiguiente(){
+        posicionActual++;
+
+        if(posicionActual >= diapositivas.length){
+            posicionActual = 0;
+        }
+
+        mostrarDiapositiva(posicionActual);
+    }
+
+    function pasarAnterior(){
+        posicionActual--;
+
+        if(posicionActual < 0){
+            posicionActual = diapositivas.length - 1;
+        }
+
+        mostrarDiapositiva(posicionActual);
+    }
+
+    siguiente.addEventListener("click", pasarSiguiente);
+    anterior.addEventListener("click", pasarAnterior);
+
+    setInterval(pasarSiguiente, 4000);
+});
+</script>
+
+
+</body>
+</html>

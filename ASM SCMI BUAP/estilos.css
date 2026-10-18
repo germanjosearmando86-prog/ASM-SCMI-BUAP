@@ -1,0 +1,507 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    color: #202020;
+}
+
+h1{
+    margin: 10px 0;
+    font-size: 3.5em;
+}
+
+h2{
+    margin-top: 0;
+    font-size: 2.2em;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+p{
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+button,
+.boton{
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid rgba(0, 0, 0, 0.45);
+    border-radius: 18px;
+    color: white;
+    background-color: #225a0c;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover,
+.boton:hover{
+    background-color: #163b08;
+    transform: translateY(-2px);
+}
+
+.container{
+    width: min(1400px, 92%);
+    margin: auto;
+}
+
+/* ENCABEZADO */
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+header .container{
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 10px 20px;
+}
+
+.nombre-asociacion{
+    margin: 0;
+    color: #225a0c;
+    font-size: 1.15em;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.nombre-asociacion span{
+    color: #52753d;
+    font-size: 0.78em;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+header nav a{
+    padding: 8px 11px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #225a0c;
+    background-color: #e4eddf;
+}
+
+/* PORTADAS */
+
+.hero{
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    flex-direction: column;
+    padding: 70px 8% 90px;
+    color: white;
+    background-image:
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.65),
+            rgba(34, 90, 12, 0.42)
+        ),
+        var(--imagen-fondo);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1,
+.hero p,
+.hero .boton{
+    align-self: center;
+}
+
+.hero p{
+    max-width: 850px;
+    margin: 0 auto 15px;
+}
+
+.hero-corto{
+    min-height: 58vh;
+}
+
+/* SECCIONES GENERALES */
+
+.seccion-texto .container{
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.seccion-texto p{
+    max-width: 850px;
+    margin: auto;
+}
+
+.seccion-gris{
+    background-color: rgb(238, 238, 238);
+}
+
+.titulo-seccion{
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* TARJETAS DEL INICIO */
+
+#cartasinicio{
+    color: white;
+    background-color: rgb(69, 63, 63);
+}
+
+#cartasinicio .container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 55px 20px;
+}
+
+.cuadrosinicio{
+    flex: 1;
+    max-width: 330px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #55504e;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.65);
+    text-align: center;
+}
+
+.cuadrosinicio p{
+    font-size: 1em;
+}
+
+/* MISIÓN Y VISIÓN */
+
+.dos-columnas{
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    padding: 75px 20px;
+}
+
+.caja-informacion{
+    flex: 1;
+    padding: 35px;
+    border-top: 7px solid #225a0c;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.16);
+}
+
+.caja-informacion p{
+    color: #4d4d4d;
+}
+
+.imagen-mision-vision{
+    width: 100%;
+    height: 270px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #e4eddf;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.imagen-mision-vision img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CARRUSELES */
+
+.carrusel{
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #222;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.35);
+}
+
+.diapositiva{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.diapositiva.activa{
+    opacity: 1;
+}
+
+.diapositiva img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anterior,
+.siguiente{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 17px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.anterior{
+    left: 20px;
+}
+
+.siguiente{
+    right: 20px;
+}
+
+.anterior:hover,
+.siguiente:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* PERSONAS Y COORDINACIONES EN CONÓCENOS */
+
+.bloque-personas{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 70px 20px;
+}
+
+.bloque-personas.invertido{
+    flex-direction: row-reverse;
+}
+
+.bloque-personas .carrusel{
+    width: 58%;
+    height: 620px;
+    margin: 0;
+}
+
+.bloque-personas .diapositiva img{
+    object-fit: cover;
+    object-position: center top;
+}
+
+.texto-personas{
+    flex: 1;
+    text-align: left;
+}
+
+.texto-personas h2{
+    color: #225a0c;
+}
+
+.texto-personas p{
+    color: #555;
+}
+
+/* PÁGINA GENERAL DE COORDINACIONES */
+
+.lista-coordinaciones{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 70px 20px;
+}
+
+.tarjeta-coordinacion{
+    display: block;
+    padding: 35px;
+    border-radius: 16px;
+    color: white;
+    background-color: #225a0c;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+    transition: 0.25s;
+}
+
+.tarjeta-coordinacion:hover{
+    background-color: #163b08;
+    transform: translateY(-4px);
+}
+
+.tarjeta-coordinacion p{
+    font-size: 1em;
+}
+
+/* PÁGINAS PRÓXIMAMENTE */
+
+.proximamente-contenido{
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.proximamente-contenido p{
+    max-width: 760px;
+    margin: 0 auto 25px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(245, 245, 245);
+}
+
+footer .container{
+    min-height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+footer p{
+    margin: 0;
+    padding: 18px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+    header .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nombre-asociacion{
+        text-align: center;
+    }
+
+    #cartasinicio .container,
+    .dos-columnas,
+    .bloque-personas,
+    .bloque-personas.invertido{
+        flex-direction: column;
+    }
+
+    .bloque-personas .carrusel{
+        width: 95%;
+    }
+
+    .texto-personas{
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px){
+    h1{
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 1.9em;
+    }
+
+    header nav{
+        gap: 2px;
+    }
+
+    header nav a{
+        padding: 6px 7px;
+        font-size: 0.87em;
+    }
+
+    .hero{
+        min-height: 78vh;
+        padding-bottom: 60px;
+    }
+
+    .cuadrosinicio{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .lista-coordinaciones{
+        grid-template-columns: 1fr;
+    }
+
+    .carrusel{
+        width: 95%;
+        height: 320px;
+    }
+
+    .bloque-personas .carrusel{
+        width: 95%;
+        height: 480px;
+    }
+
+    .bloque-personas .diapositiva img{
+        object-position: center top;
+    }
+
+    .imagen-mision-vision{
+        height: 220px;
+    }
+
+    .anterior,
+    .siguiente{
+        padding: 8px 12px;
+        font-size: 22px;
+    }
+}
+
+/* REDES SOCIALES DEL INICIO */
+
+.redes-sociales{
+    padding: 45px 20px 65px;
+    text-align: center;
+    background-color: white;
+}
+
+.redes-sociales h2{
+    color: #225a0c;
+    margin-bottom: 25px;
+}
+
+.botones-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botones-redes .boton{
+    min-width: 150px;
+    text-align: center;
+}
